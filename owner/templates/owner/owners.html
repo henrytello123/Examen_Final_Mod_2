@@ -1,0 +1,18 @@
+{% extends "owner/base_generic.html"  %}
+
+{% block content %}
+
+<div>
+<p>Owner de la Base de Datos</p>
+   <ul>
+       {% for owner in data %}
+
+           <li>
+               <p>{{ owner.nombre }} tiene {{ owner.edad }} años y es de {{ owner.pais }} </p>
+           </li>
+       {% endfor %}
+   </ul>
+   <a type="button" class="btn btn-success" href="{% url 'owner_create' %}">Crear owner</a>
+</div>
+
+{% endblock %}
